@@ -8,7 +8,7 @@
 
 本质上，每一种网络模型就是Docker的默认网络配置。而none模型则是一张白纸，为我们提供了最大自由度的组网可能。
 
-![Bridge](pic.jpg)
+![Bridge](https://github.com/microhuang/docker-network/blob/master/pic.png)
 ![Host](pic2.jpg)
 ![Container](pic3.jpg)
 ![None](pic4.jpg)
