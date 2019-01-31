@@ -1,6 +1,6 @@
-#深度理解Docker的网络模型和任意组网需求
+# 深度理解Docker的网络模型和任意组网需求
 
-##Docker有四种网络模型：
+## Docker有四种网络模型：
 * bridge
 * host
 * container
@@ -8,20 +8,20 @@
 
 本质上，每一种网络模型就是Docker的默认网络配置。而none模型则是一张白纸，为我们提供了最大自由度的组网可能。
 
-##Bridge
+## Bridge
 ![Bridge](pic.png)
-##Host
+## Host
 ![Host](pic2.png)
-##Container
+## Container
 ![Container](pic3.png)
-##None
+## None
 ![None](pic4.png)
 
 Bridge模式下，Docker服务启动时，会在主机上创建名为docker0的虚拟网桥，默认分配172.17.0.1/16。同时，创建一对虚拟网卡veth pair设备，并将一端放在容器中，并命名为eth0，另一端则在主机中，以veth***命名，并入docker0网桥绑定。
 
 之于以上理解，我们完全可以从none模式定制出双网桥双网卡等特殊组网模型。
 
-##主要包括：
+## 主要包括：
 ```
 建立容器网络隔离空间
 ln -sf /proc/<PID>/ns/net /var/run/netns/<container id>
