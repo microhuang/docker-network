@@ -54,3 +54,7 @@ ip netns exec <container id> ifconfig veth1_container up
 重复以上过程，构造多网桥、多网卡独立网络。
 
 ![Bridge](pic5.png)
+
+## 感谢
+
+以上Brigde、Host、Container、None图片来自网络。
