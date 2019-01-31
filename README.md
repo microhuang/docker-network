@@ -19,7 +19,7 @@
 
 Bridge模式下，Docker服务启动时，会在主机上创建名为docker0的虚拟网桥，默认分配172.17.0.1/16。同时，创建一对虚拟网卡veth pair设备，并将一端放在容器中，并命名为eth0，另一端则在主机中，以veth***命名，并入docker0网桥绑定。
 
-> Bridge模式下，docker0、veth***、eth0，三者可以认为是同一endpoint。
+> Bridge模式下，docker0、veth***、eth0，三者可以认为是同一endpoint。通俗的说就是一个水管上的三个端口。
 
 之于以上理解，我们完全可以从none模式定制出双网桥双网卡等特殊组网模型。
 
