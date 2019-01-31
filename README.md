@@ -33,7 +33,7 @@ ip link add veth1_container type veth peer name veth1_root
 brctl addbr br0
 
 为网桥分配IP
-ifconfig br0 172.18.0.0 netmask 255.255.0.0
+ifconfig br0 172.18.0.1 netmask 255.255.0.0
 
 将veth peer设备对一端绑定到网桥
 brctl addif br0 veth1_root
